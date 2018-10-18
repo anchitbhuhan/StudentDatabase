@@ -1,0 +1,57 @@
+fieldset{
+	position: absolute;
+	top: 40%;
+	left: 40%;
+	width: 45em;
+	height: 30em;
+	margin-top: -9em;
+	margin-left: -15em;
+	background-image:  linear-gradient(#005AA7,#FFFDE4);
+	border:none;
+}
+body{
+	background-image: url("dsatm_image.jpg");
+}
+h1{
+	text-align: center;
+	font-family: Arial;
+}
+form{
+	margin-left: 16.5em;
+	padding-right: 15px;
+
+}
+button{
+	margin-left: 1.4em;
+	border: none;
+	padding: 11px 28px;
+	font-size: 15px;
+	background-color: #7397c6;
+	-webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+button:hover {
+    background-color: #003366;
+    color: white;
+}
+p{
+	margin-left: 15em;
+	font-family: Arial;
+}
+input::-webkit-input-placeholder{
+	font-size: 15px;
+
+}
+body form input	{
+	padding: 10px;
+	border: 1px solid #003366;
+	border-radius: 4px;
+	border: none;
+}
+#sign:hover{
+	color: #7a233f;
+	: none;
+}
+#sign{
+	text-decoration: none;
+}
