@@ -1,0 +1,95 @@
+body{
+  background-image: url("6a35e8a9-c5de-4ef8-aabc-f28744cc25b7.jpeg");
+  background-size: cover;
+  margin:0;
+}
+.icon{
+  float:right;
+  image-resolution: 500dpi;
+
+}
+
+fieldset{
+  position:absolute;
+     top: 40%;
+     left: 50%;
+     width:25em;
+     height:23em;
+     margin-top: -9em;
+     margin-left: -15em;
+     border: 1px solid #ccc;
+     background-color: white;
+     opacity:0.8 ;
+      filter: alpha(opacity=40);
+}
+fieldset:hover {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 20 0 1px rgba(20, 20, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.4s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  background-color: white;
+}
+
+form{
+
+  margin-top: 0px;
+  padding-left: 35px;
+
+}
+body fieldset form input{
+  width:350px;
+  padding-left:10px;
+  height:50px;
+border-bottom: 3px solid  #003366;
+border-top: none;
+border-left: none;
+border-right:none;
+}
+span{
+text-align: center;
+padding-left: 140px;
+margin-top: 20px;
+font-size: 40px;
+font-weight: normal ;
+font-family: sans-serif;
+
+
+}
+.button{
+width:350px;
+height: 40px;
+font-size: 20px;
+border:2px solid #003366 ;
+background-color: #1f4a8e;
+color:white;
+font-weight:bold;
+}
+.button:hover{
+  background-color: #003366;
+    color: white;
+
+
+}
+input::-webkit-input-placeholder {
+    font-size: 15px;
+    line-height: 3;
+}
+input[type="text"], input[type="password"]
+{
+    font-size:24px;
+}
+.notuser{
+  font-size:20px;
+  padding-left: 100px;
+}
+textarea:focus, input:focus{
+    outline: none;
+    background-color: white;
+}
