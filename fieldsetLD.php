@@ -15,7 +15,7 @@
 			margin:0;
 			text-align: center;
 			font-family: sans-serif;
-			border-bottom: 3px solid black;
+			border-bottom: 4px solid #08abd8;
 			background-color: #003366;
 			color: white;
 			padding-top: 2px;
