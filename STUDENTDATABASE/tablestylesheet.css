@@ -1,10 +1,13 @@
+
 table{
+  
   text-align: center;
   border:2px solid lightgrey;
   border-collapse: collapse;
-  width;100%;
+  width:100%;
   height:auto;
   font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+
 
 }
 td{
@@ -17,7 +20,7 @@ font-size: 19px;
 }
 th{
   border:1px solid lightgrey;
-  background-color: #4caf50;
+  background-color: #003366;
   padding: 3px;
   color:white;
   font-size: 20px;

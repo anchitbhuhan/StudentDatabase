@@ -1,21 +1,22 @@
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html>
 <head>
-<title>DAYANAND SAGAR ACADEMY OF TECHNOLOGY AND MANAGEMENT</title>
-<link rel="stylesheet" type="text/css" href="dashboardstyle.css">
-
+	<title></title>
+	<link rel="stylesheet" type="text/css" href="newtabcss.css">
+	<link rel="stylesheet" type="text/css" href="onclickaddstudent.css">
 </head>
 <body>
-<header>
+	<header>
 <a id="dsatm"href=https://dsatm.edu.in/><img src="dsatm_logo.png" alt="dsatm"/></a>
 <div id="etc">
 <a href="https://www.facebook.com/DSIorganization"><img class="social" src="fb.png"alt="fb"/></a>
 <a href="https://twitter.com/DSIorganization"><img class="social"src="twitter.png" alt=twitter/></a>
-<a href="https://plus.google.com/112592840884555805844"><img class="social" src="google+.png" alt=google/><a/>
+<a href="https://plus.google.com/112592840884555805844"><img class="social" src="google+0.png" alt=google/><a/>
 <a href="https://www.youtube.com/user/DSIorganization"><img class="social"src="youtube.png" alt=ytb/></a>
 </div>
 </header>
-
+<div>
   <ul>
     <li id=forhover >Home</li>
     <li id=forhover >About Us</li>
@@ -25,31 +26,206 @@
     <li id=forhover>Research</li>
     <li id=forhover>Campus Life</li>
     <li id=forhover>Library</li>
-     <button type="submit" name="logout" >LOGOUT</button>
+		<span><?php echo $_SESSION['name']; ?></span>
+     <button id="logoutbutton" type="submit" name="logout" >LOGOUT</button>
   </ul>
-<section style="height: 500px;">
-   <fieldset>
-    <form class="" action="includes/pdsubmit.php" method="post"  enctype="multipart/form-data">
-      <input type="text" name="usn" placeholder="USN"><br><br>
+</div>
 
-      <input type="text" name="name" placeholder="Name"><br><br>
+  <div class="tabContainer">
 
-      <input type="text" name="mobile" placeholder="Mobile"><br><br>
+		<div class="buttonContainer">
+			<button style="width:20%;"  onclick="showPanel(0,'#003366')">Personal Details</button>
+    		<button style="width:20%;" onclick="showPanel(1,'#003366')">Libray Details</button>
+				<button style="width:20%;" onclick="showPanel(2,'#003366')">Course Details</button>
+			<button style="width:20%;" onclick="showPanel(3,'#003366')">Academics Details</button>
+			<button style="width:20%;" onclick="showPanel(4,'#003366')">Achievements</button>
+		</div>
+		<div class="tabPanel">
+			<form class="form-style-9" action="includes/pdsubmit.php" method="post">
+			  <ul>
+				<li>
+    				<input type="text" name="usn" class="field-style field-split align-left" placeholder="USN" />
+    				<input type="text" name="name" class="field-style field-split align-right" placeholder="Name" />
 
-      DOB: <input type="date" name="dob" placeholder="DOB"><br><br>
+				</li>
 
-      HOSTELITE:YES<input type="radio" name="hostelite" value="yes" ><br><br>
-                    NO:<input type="radio" name="hostelite" value="no"><br><br>
-      GENDER:Male<input type="radio" name="gender" value="male"><br><br>
-      Female<input type="radio" name="gender" value="female"><br><br>
+				<li>
+    				<input type="text" name="mobile" class="field-style field-split align-left" placeholder="Phone" />
+    				<input type="date" name="dob" class="field-style field-split align-right" placeholder="Date Of Birth" />
+				</li>
 
-      <input type="text" name="address" placeholder="address"><br><br>
-      Upload Image: <input type="file" name="image"><br><br>
-      <input type="submit" name="submit"><br>
-    </form>
-</fieldset>
-</section>
+				<li>
+					<input type="address" name="address" class="field-style field-full align-none" placeholder="Address" />
+				</li>
+				<li>
+					Male:<input type="radio" name="gender" value="male">
+					Female:<input type="radio" name="gender" value="female">
+				</li>
 
-  <footer>
+				<li>
+					HOSTELITE: YES<input type="radio" name="hostelite" value="yes" >
+                    NO:<input type="radio" name="hostelite" value="no">
+				</li>
+
+
+				<li>
+					<input type="submit" value="Submit" name="submit" />
+				</li>
+
+			  </ul>
+</form>
+
+
+		</div>
+		<div class="tabPanel">
+			<form class="form-style-9" action="includes/ldsubmit.php" method="post">
+			  <ul>
+				<li>
+    				<input type="text" name="usn" class="field-style field-split align-left" placeholder="USN" />
+    				<input type="text" name="libid" class="field-style field-split align-right" placeholder="Library ID" />
+
+				</li>
+
+				<li>
+    				<input type="text" name="bookid" class="field-style field-split align-left" placeholder="Book Id" />
+    				<input type="text" name="bookname" class="field-style field-split align-right" placeholder="Book Name" />
+				</li>
+
+				<li>
+					Date Out:<input type="date" name="dateout" class="field-style field-full align-none" placeholder="Date Out" />
+					Due date:<input type="date" name="duedate" class="field-style field-full align-none" placeholder="Due Date" />
+				</li>
+
+
+
+				<li>
+					<input type="submit" value="Submit" name="submit" />
+				</li>
+
+			  </ul>
+</form>
+		</div>
+
+	<div class="tabPanel">
+		<form class="form-style-9" action="includes/csubmit.php" method="post">
+			<ul>
+			<li>
+					<input type="text" name="usn" class="field-style field-split align-left" placeholder="USN" />
+					<input type="text" name="sub_code" class="field-style field-split align-right" placeholder="Subject Code" />
+
+			</li>
+
+			<li>
+					<input type="text" name="sub_name" class="field-style field-split align-left" placeholder="Subject Name" />
+
+			</li>
+
+			<li>
+				<input type="text" name="faculty_name" class="field-style field-full align-none" placeholder="Faculty Name" />
+
+			</li>
+
+
+
+			<li>
+				<input type="submit" value="Submit" name="submit" />
+			</li>
+
+			</ul>
+</form>
+	</div>
+		<div class="tabPanel">
+			<form class="form-style-9" action="includes/adsubmit.php" method="post">
+			  <ul>
+				<li>
+    				<input type="text" name="usn" class="field-style field-split align-left" placeholder="USN" />
+    				<input type="text" name="branch" class="field-style field-split align-right" placeholder="Branch" />
+
+				</li>
+
+				<li>
+    				<input type="text" name="sem" class="field-style field-split align-left" placeholder="Semester" />
+    				<input type="text" name="ia1" class="field-style field-split align-right" placeholder="IA1" />
+				</li>
+
+				<li>
+					<input type="text" name="ia2" class="field-style field-full align-none" placeholder="IA2" />
+				</li>
+				<li>
+					<input type="text" name="ia3" class="field-style field-full align-none" placeholder="IA3" />
+				</li>
+				<li>
+					<input type="text" name="ext_agg" class="field-style field-full align-none" placeholder="External Agg." />
+				</li>
+				<li>
+					<input type="submit" value="Submit" name="submit" />
+				</li>
+
+			  </ul>
+</form>
+
+		</div>
+		<div class="tabPanel">
+			<form class="form-style-9" action="includes/achsubmit.php" method="post">
+			<ul>
+				<li>
+    				<input type="text" name="usn" class="field-style field-split align-left" placeholder="USN" />
+
+
+				</li>
+
+				<li>
+    				<input type="text" name="project" class="field-style field-split align-left" placeholder="Projects" />
+
+				</li>
+
+				<li>
+					<input type="text" name="internships" class="field-style field-full align-none" placeholder="Internships" />
+				</li>
+
+				<li>
+					<input type="text" name="paper_present" class="field-style field-full align-none" placeholder="Paper Presentation" />
+				</li>
+
+				<li>
+					<input type="text" name="certifications" class="field-style field-full align-none" placeholder="Certifications" />
+				</li>
+
+				<li>
+					<input type="submit" value="Submit" name="submit" />
+				</li>
+
+			  </ul>
+			 </form>
+
+		</div>
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
+
+<div>
+	<footer style="margin-top: 0px;">
   <pre>© 2018 Dayananda Sagar Institutions . All Rights Reserved.</pre>
-  </footer>
+  </footer>s
+</div>
+
+<script src="togglescript.js"></script>
+
+</body>
+</html>
