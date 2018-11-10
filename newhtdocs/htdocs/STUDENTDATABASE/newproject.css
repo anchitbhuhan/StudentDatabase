@@ -1,0 +1,74 @@
+header {
+  background-color: #003366;
+margin-left: 0px;
+}
+
+#logo {
+  padding-top: 0px;
+  padding-bottom: 20px;
+  padding-left: 50px;
+  box-sizing: border-box;
+
+}
+
+
+li {
+  float: right;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0px;
+  padding-right: 150px;
+  padding-top: 20px;
+  overflow: hidden;
+}
+
+#social {
+  text-align: center;
+}
+
+footer {
+  background-color: #003366;
+  height: 100px;
+  display: inline;
+}
+
+div {
+  background-color: #003366;
+  height: 90px;
+  margin-left: 0px;
+}
+
+#navi {
+  background-color: #e6e6e6;
+
+  height: 45px;
+}
+
+.home {
+  padding-top: 10px;
+  float: left;
+}
+
+.about {
+  padding: 15px;
+  text-decoration: none;
+  color: black;
+  height: 10px;
+  font-family: sans-serif;
+
+}
+div nav a:hover{
+  background-color: #d5d9e0;
+}
+
+#content {
+  border-top: 1px solid lightblue;
+}
+
+#login {
+  width: 400px;
+  height: 300px;
+  margin-left: 450px;
+}
