@@ -1,4 +1,28 @@
-create table student(
+
+
+
+
+
+
+CREATE TABLE `users` (
+  `user_id` int(11) NOT NULL,
+  `user_first` varchar(256) NOT NULL,
+  `user_last` varchar(256) NOT NULL,
+  `user_email` varchar(256) NOT NULL,
+  `user_uid` varchar(256) NOT NULL,
+  `user_pwd` varchar(256) NOT NULL,
+  'image' longblob 
+)
+
+
+
+
+
+
+
+
+
+	create table student(
     usn varchar(11) primary KEY not null,
     name varchar(50) not null,
     mobile varchar(100) not null,
