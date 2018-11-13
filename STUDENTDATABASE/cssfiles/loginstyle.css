@@ -1,0 +1,93 @@
+body{
+  background-image: url("../images/6a35e8a9-c5de-4ef8-aabc-f28744cc25b7.jpeg");
+  background-size: cover;
+  margin:0;
+}
+.header img{
+  background-color:#003366;
+  margin-left:40px;
+}
+.fieldset{
+  position:absolute;
+     top: 40%;
+     left: 50%;
+     width:25em;
+     height:23em;
+     margin-top: -9em;
+     margin-left: -15em;
+     border: 1px solid #ccc;
+     background-color: white;
+     opacity:0.8 ;
+      filter: alpha(opacity=40);
+}
+.fieldset:hover {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 20 0 1px rgba(20, 20, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.4s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
+  background-color: white;
+}
+.fieldset .sign-in{
+ margin:0px;
+ font-size: 40px;
+ text-align: center;
+ font-family: sans-serif;
+ margin-top:10px;
+ font-weight:bold;
+}
+.form{
+  margin-top: 0px;
+}
+.form input{
+  margin-top: 30px;
+  width:350px;
+  margin-left:25px;
+  padding-right: 0px;
+  height:30px;
+border-bottom: 3px solid  #003366;
+border-top: none;
+border-left: none;
+border-right:none;
+}
+.form button{
+margin-left: 150px;
+width:100px;
+height: 40px;
+font-size: 20px;
+background-color: #003366;
+color:white;
+font-weight:bold;
+border:none;
+ box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+ -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+.form button:hover{
+  background-color: #01183d;
+    color: white;
+}
+ input::-webkit-input-placeholder {
+     font-size: 15px;
+     line-height: 3;
+ }
+ input[type="text"], input[type="password"]
+ {
+     font-size:24px;
+ }
+ .fieldset span{
+   font-size:20px;
+   padding-left: 100px;
+   font-family: sans-serif;
+ }
+ textarea:focus, input:focus{
+     outline: none;
+     background-color: white;
+ }

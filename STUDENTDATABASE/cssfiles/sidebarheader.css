@@ -3,9 +3,9 @@ body{
   padding-right: 0;
   font-family: Arial;
 background-color: #ededed;
-outline: none;
 }
-header{background-color:#003366;
+header{
+  background-color:#003366;
     height:60px;
      padding:6px;}
 #dsatm{padding-left:20px}
@@ -16,7 +16,7 @@ header{background-color:#003366;
 .social{padding-top:.5cm;}
 #main{position:relative;}
 
-li{display:inline-block;
+/* li{display:inline-block;
     font-family: Arial;
     padding-right: 20px;
     padding-left: 20px;
@@ -25,18 +25,14 @@ li{display:inline-block;
     margin: 0;
     text-align: center;
 
-  }
-  li a{
-    display: block;
-
-  }
-ul{float:left;
-padding-left:0px;
+  } */
+/* ul{float:left;
+padding-left:28px;
 height:30.5px;
 margin-top: 0;
 width:100%;
 background-color: #d8d7d6;
-}
+} */
 #forhover:hover{
 	-webkit-transition-duration: 0.4s;
 	transition-duration: 0.4s;
@@ -45,14 +41,13 @@ background-color: #d8d7d6;
 
 
 }
-#logoutbutton{
+.nav-main #logoutbutton{
 	float: right;
-	margin-right: 0px;
-  width:80px;
-  height:50px;
-	padding: 8px;
-	background-color: #f3f3f3;
-	border: none;
+	margin-right: 100px;
+
+	padding: 7.5px;
+	background-color: white;
+border:none;
 	outline: none;
 	-webkit-transition-duration: 0.4s;s
 	transition-duration: 0.4s;
@@ -84,32 +79,4 @@ input{
 border-radius: 4px;
   padding: 2px;
   outline: none;
-}
-.nav ul li a{
-  padding-top: 5px;
-  text-decoration: none;
-  color:black;
-  height:35px;
-}
-.nav ul li a:hover{
-  text-decoration: none;
-  color:white;
-}
-.nav ul{
-  height:50px;
-  margin-left: 0;
-}
-.nav ul li.active{
-  background-color: #003366;
-  color:white;
-}
-.nav ul .name{
-  display: block;
-  text-align: center;
-  padding-top: 13px;
-  font-family: sans-serif;
-  padding-left: 20px;
-  float: right;
-  padding-right: 10px;
-
 }
