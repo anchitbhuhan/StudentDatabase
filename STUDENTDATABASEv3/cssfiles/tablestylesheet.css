@@ -1,0 +1,63 @@
+
+
+table{
+
+  text-align: center;
+  border:2px solid lightgrey;
+  border-collapse: collapse;
+  width:100%;
+  height:auto;
+  font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+  margin-left: 0;
+
+}
+
+.tabContainer.coursetable{
+  text-align: center;
+  border:2px solid lightgrey;
+  border-collapse: collapse;
+  width:50%;
+  height:auto;
+  font-family: "Trebuchet MS",Arial,Helvetica,sans-serif;
+  margin-left: 0;
+}
+
+.tabContainer.coursetable table tr td input{
+  border: 1px solid #003366;border-radius: 4px;
+
+}
+td{
+border:1px solid lightgrey;
+padding:5px;
+font-size: 19px;
+
+
+
+}
+th{
+  border:1px solid lightgrey;
+  background-color: #003366;
+  padding: 3px;
+  color:white;
+  font-size: 20px;
+
+
+}
+tr:hover{
+
+  background-color: darkgrey;
+
+}
+tr:nth-child(even){
+
+background-color: #f2f2f2;
+
+
+
+}
+tr:active{
+
+background-color: #8a8c8e;
+
+
+}
