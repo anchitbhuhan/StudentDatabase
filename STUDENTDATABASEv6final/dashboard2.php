@@ -4,7 +4,7 @@ if($_SESSION['status']!="Active")
     header("location:index.php?error=loginagain");
 }
 
- ?>
+?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -37,7 +37,6 @@ if($_SESSION['status']!="Active")
         <li><a href="viewallstudent.php">View Student</a></li>
         <li><a href="deletestudent.php">Delete Student</a></li>
         <li><a href="UpdateStudent/updatestudent.php">Update Student</a></li>
-        <li><a href="#">About Us</a></li>
         <li class="name"><?php echo $_SESSION['username']; ?></li>
         <form class=""  method="post">
              <button id="logout" type="submit" name="logout" >LOGOUT</button>

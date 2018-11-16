@@ -1,0 +1,84 @@
+.dashboardbody{
+  background-image: url('../images/laptop-blur-computer-163130.jpg');
+  background-size: cover;
+}
+#button1{
+  margin-left: 50px;
+  width:200px;
+  height:150px;
+  margin-top: 200px;
+  background-color: #003366 ;
+border: none;
+color: white;
+-webkit-transition-duration: 0.4s; /* Safari */
+transition-duration: 0.4s;
+cursor: pointer;
+border-radius: 15px;
+padding:20px;
+}
+#button1:hover{
+  background-color:#0a1759;
+color: white;
+box-shadow: 0 12px 18px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+#button2{
+  margin-left: 60px;
+  width:200px;
+  height:150px;
+  background-color: #003366; /* Green */
+border: none;
+color: white;
+-webkit-transition-duration: 0.4s; /* Safari */
+transition-duration: 0.4s;
+cursor: pointer;
+border-radius: 15px; 
+
+}#button2:hover{
+  background-color:#0a1759;
+color: white;
+box-shadow: 0 12px 18px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+#button3{
+  margin-left: 50px;
+  width:200px;
+  height:150px;
+  margin-top: 60px;
+  margin-bottom: 50px;
+  background-color: #003366 ; /* Green */
+border: none;
+color: white;
+-webkit-transition-duration: 0.4s; /* Safari */
+transition-duration: 0.4s;
+cursor: pointer;
+border-radius: 15px;
+}#button3:hover{
+  background-color: #0a1759;
+color: white;
+box-shadow: 0 12px 18px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+#button4  {
+  margin-left: 60px;
+  width:200px;
+  height:150px;
+  margin-bottom: 50px;
+  background-color: #003366 ; /* Green */
+border: none;
+color: white;
+-webkit-transition-duration: 0.4s; /* Safari */
+transition-duration: 0.4s;
+cursor: pointer;
+border-radius: 15px;
+}#button4:hover{
+  background-color: #0a1759;
+color: white;
+box-shadow: 0 12px 18px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+}
+#prologue{
+  float:right;
+  color:white;
+  font-family:sans-serif;
+margin-right: 20px;
+  font-size: 40px;
+  font-weight: normal;
+  margin-top: 100px;
+}
