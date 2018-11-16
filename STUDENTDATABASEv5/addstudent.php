@@ -1,9 +1,4 @@
-<?php session_start();
-if($_SESSION['status']!="Active")
-{
-    header("location:index.php?error=loginagain");
-}
-?>
+<?php session_start(); ?>
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
@@ -40,18 +35,8 @@ if($_SESSION['status']!="Active")
         <li><a href="deletestudent.php">Delete Student</a></li>
         <li><a href="UpdateStudent/updatestudent.php">Update Student</a></li>
         <li class="name"><?php echo $_SESSION['username']; ?></li>
-         <form class=""  method="post">
+        <form class="" action="index.php?logout=success" method="post">
              <button id="logout" type="submit" name="logout" >LOGOUT</button>
-              <?php
-            if(isset($_POST['logout'])){
-              $_SESSION['status']="disabled";
-              session_destroy();
-              $_SESSION = array();
-              unset($_SESSION['logout']);
-              header("Location:index.php?logout=success");
-            }
-
-             ?>
         </form>
     </ul>
   </div>
@@ -204,14 +189,47 @@ if($_SESSION['status']!="Active")
                 <li><label>USN:&nbsp;&nbsp;&nbsp;</label>	<input type="text" name="usn" class="" placeholder="USN" required pattern="^[1][Dd][Tt]\d\d[a-zA-Z][A-Za-z]\d\d\d$" /></li>
                 <li><label>Branch:&nbsp;</label>	<input type="text" name="branch" class="" placeholder="Branch" required pattern="^[A-Za-z\s]*" /></li>
                 <li><label>Semester:&nbsp;</label><input type="text" name="sem" class="" placeholder="Semester" required  /></li>
-                <li><label>IA1:&nbsp;&nbsp;</label><input type="text" name="ia1" class="" placeholder="IA1" required  pattern="^(20||1[0-9]||[0-9])$" /></li>
-                <li><label>IA2:</label><input type="text" name="ia2" class="" placeholder="IA2" required  pattern="^(20||1[0-9]||[0-9])$" /></li>
-                <li><label>IA3:&nbsp;</label><input type="text" name="ia3" class="" placeholder="IA3" required pattern="^(20||1[0-9]||[0-9])$" /></li>
                 <li><label>Ext. Agg:</label>	<input type="text" name="ext_agg" class="" placeholder="External Agg." required pattern="^(10\.[0][0]||\d\.\d\d||[0-9]||10)$" /></li>
+                <li><label>CN lab:&nbsp;</label><input type="text" name="cnlab" class="" placeholder="CN IA" required  /></li>
+                <li><label>DBMS lab:&nbsp;</label><input type="text" name="dbmslab" class="" placeholder="DBMS IA" required  /></li>
 
 
 
     </ul>
+    <table style="margin-right:100px;background-color:#003366;">
+      <tr style="color:white;">
+      <th>JAVA</th>
+      <th>DBMS</th>
+      <th>AI/CLOUD</th>
+      <th>ATC</th>
+      <th>CN</th>
+      <th>ETM</th>
+    </tr>
+    <tr>
+      <td><input type="text" name="java_ia1" value="" placeholder="IA1"></td>
+      <td><input type="text" name="dbms_ia1" value="" placeholder="IA1"></td>
+      <td><input type="text" name="ac_ia1" value="" placeholder="IA1"></td>
+      <td><input type="text" name="atc_ia1" value="" placeholder="IA1"></td>
+      <td><input type="text" name="cn_ia1" value="" placeholder="IA1"></td>
+      <td><input type="text" name="etm_ia1" value="" placeholder="IA1"></td>
+    </tr>
+    <tr>
+      <td><input type="text" name="java_ia2" value="" placeholder="IA2"></td>
+      <td><input type="text" name="dbms_ia2" value="" placeholder="IA2"></td>
+      <td><input type="text" name="ac_ia2" value="" placeholder="IA2"></td>
+      <td><input type="text" name="atc_ia2" value="" placeholder="IA2"></td>
+      <td><input type="text" name="cn_ia2" value="" placeholder="IA2"></td>
+      <td><input type="text" name="etm_ia2" value="" placeholder="IA2"></td>
+    </tr>
+    <tr>
+      <td><input type="text" name="java_ia3" value="" placeholder="IA3"></td>
+      <td><input type="text" name="dbms_ia3" value="" placeholder="IA3"></td>
+      <td><input type="text" name="ac_ia3" value="" placeholder="IA3"></td>
+      <td><input type="text" name="atc_ia3" value="" placeholder="IA3"></td>
+      <td><input type="text" name="cn_ia3" value="" placeholder="IA3"></td>
+      <td><input type="text" name="etm_ia3" value="" placeholder="IA3"></td>
+    </tr>
+    </table>
           <button type="submit" name="submit">Add</button>
 
 
@@ -261,16 +279,6 @@ if($_SESSION['status']!="Active")
 
 
 <?php
-if(!empty($_GET)){
-if(isset($_GET['usn'])){
-  if($_GET['usn']=='duplicate'){
-    echo '<script>
 
-    alert("USN already exists");
-
-</script>';
-  }
-}
-}
 
  ?>

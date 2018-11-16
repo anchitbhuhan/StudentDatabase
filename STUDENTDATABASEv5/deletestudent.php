@@ -1,10 +1,6 @@
 <?php
 include_once 'includes/dbh.inc.php';
 session_start();
-if($_SESSION['status']!="Active")
-{
-    header("location:index.php?error=loginagain");
-}
 $sql = "SELECT * FROM student;";
 $result = mysqli_query($conn,$sql);
  ?>
@@ -62,18 +58,8 @@ $result = mysqli_query($conn,$sql);
          <li><a class="active" href="deletestudent.php">Delete Student</a></li>
          <li><a href="UpdateStudent/updatestudent.php">Update Student</a></li>
          <li class="name"><?php echo $_SESSION['username']; ?></li>
-         <form class=""  method="post">
+         <form class="" action="index.php?logout=success" method="post">
               <button id="logout" type="submit" name="logout" >LOGOUT</button>
-               <?php
-            if(isset($_POST['logout'])){
-              $_SESSION['status']="disabled";
-              session_destroy();
-              $_SESSION = array();
-              unset($_SESSION['logout']);
-              header("Location:index.php?logout=success");
-            }
-
-             ?>
          </form>
      </ul>
    </div>
@@ -84,7 +70,6 @@ $result = mysqli_query($conn,$sql);
    <form class="search"  action="deletestudent.php" method="post">
        <input type="text" name="search" value="" placeholder="Search USN or Name">
      <button style="" type="submit" name="viewbutton">Search</button>
-
    </form>
 
 
@@ -96,7 +81,7 @@ $result = mysqli_query($conn,$sql);
 <!-- <h1>STUDENT TABLE</h1 -->
 <?php if(!isset($_POST['viewbutton'])){
 
-  echo '<input style="margin-bottom:50px;height:35px;margin-left:20px;background-color:#f65757;border:none;color:white;"  type="submit" name="delete" value="Delete" id="delete">';
+  echo '<input style="margin-bottom:50px;height:35px;margin-left:20px;background-color:red;border:none;color:white;"  type="submit" name="delete" value="Delete" id="delete">';
   echo '
     <table style="margin-top:-40px;" id="menu">
     <tr>
@@ -130,12 +115,12 @@ $result = mysqli_query($conn,$sql);
 
 }
 
-echo '</table>';
-
+echo '</table>
+</form>';
 
 }else{
   $search = $_POST['search'];
-echo '<input style="margin-bottom:50px;height:35px;margin-left:20px;background-color:#f65757;border:none;color:white;"  type="submit" name="delete" value="Delete" id="delete">';
+echo '<input style="margin-bottom:50px;height:35px;margin-left:20px;background-color:red;border:none;color:white;"  type="submit" name="delete" value="Delete" id="delete">';
 
 $sql = "SELECT * FROM student WHERE usn LIKE '%$search%' OR name LIKE '%$search%';";
 $result = mysqli_query($conn,$sql);
@@ -172,10 +157,10 @@ echo "</tr>";
 
 }
 
-echo '</table>';
+echo '</table>
+</form>';
 
 }
-echo '</form>';
 ?>
 </div>
 </body>

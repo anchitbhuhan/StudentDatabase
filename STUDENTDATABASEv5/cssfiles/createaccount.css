@@ -1,0 +1,88 @@
+body{background-image: url("../images/6a35e8a9-c5de-4ef8-aabc-f28744cc25b7.jpeg");
+background-size: cover;
+margin:0;
+}
+.header img{
+  background-color:#003366;
+  margin-left:40px;
+}
+.fieldset{
+	position: absolute;
+	top: 40%;
+	left: 40%;
+	width: 45em;
+	height: 30em;
+	margin-top: -9em;
+	margin-left: -15em;
+	background-color: #bdc1c9;
+	opacity:0.9 ;
+	 filter: alpha(opacity=60);
+   border:none;
+   box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+.fieldset img{
+  /* background-color: white; */
+  margin-left: 320px;
+  margin-top: 30px;
+  height:50px;
+  border-radius: 40%;
+}
+.fieldset h1{
+	text-align: center;
+	font-family: Arial;
+}
+.fieldset p{
+	margin-left: 15em;
+	font-family: Arial;
+}
+.fieldset p a{
+	text-decoration: none;
+}
+.fieldset form{
+	margin-left: 16.5em;
+	padding-right: 15px;
+
+  margin-left: 40px;
+  margin-right: 40px;
+
+}
+.fieldset form ul{
+  list-style-type: none;
+
+
+}
+.fieldset form ul li input{
+  margin:20px;
+  padding:10px;
+  border: 1px solid #003366;
+	border-radius: 4px;
+
+}
+.fieldset form ul li input::-webkit-input-placeholder{
+	font-size: 15px;
+
+}
+.fieldset form ul li button{
+  margin-left: 1.4em;
+	border: none;
+	padding: 11px 28px;
+	font-size: 15px;
+	background-color: #607bb2;
+	-webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+}
+.fieldset form ul li button:{
+  margin-left: 1.4em;
+	border: none;
+	padding: 11px 28px;
+	font-size: 15px;
+	background-color: #607bb2;
+	-webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+
+}
+.fieldset form ul li button:hover{
+    background-color: #003366;
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
