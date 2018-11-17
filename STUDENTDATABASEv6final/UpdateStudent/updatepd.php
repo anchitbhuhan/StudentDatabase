@@ -60,7 +60,7 @@ $_SESSION['address'] = $row['address'];
 
 
         </ul>
-   <button  id="logoutbutton" onclick="location.href='../index.php'" type="submit" name="logout" >LOGOUT</button>
+   <!-- <button  id="logoutbutton" onclick="location.href='../index.php'" type="submit" name="logout" >LOGOUT</button> -->
 
 
 

@@ -68,7 +68,7 @@ $row=mysqli_fetch_assoc($result);
 
 
         </ul>
-   <button  id="logoutbutton" onclick="location.href='../index.php'" type="submit" name="logout" style="float: right;">LOGOUT</button>
+   <!-- <button  id="logoutbutton" onclick="location.href='../index.php'" type="submit" name="logout" style="float: right;">LOGOUT</button> -->
 
 
 

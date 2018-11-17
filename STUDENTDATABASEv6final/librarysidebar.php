@@ -5,13 +5,14 @@ $usn = $_SESSION['usn'];
 $name = $_SESSION['name'];
 $sql = "SELECT * FROM lib_details WHERE usn='$usn';";
 $result = mysqli_query($conn,$sql);
-$row=mysqli_fetch_assoc($result);
-
- $lib_id 	= $row['lib_id'];
- $book_id = $row['book_id'];
- $book_name = $row['book_name'];
- $date_out = $row['date_out'];
- $due_date = $row['due_date'];
+//
+// $row=mysqli_fetch_assoc($result);
+//
+//  $lib_id 	= $row['lib_id'];
+//  $book_id = $row['book_id'];
+//  $book_name = $row['book_name'];
+//  $date_out = $row['date_out'];
+//  $due_date = $row['due_date'];
 
  ?>
 <!DOCTYPE html>
@@ -83,11 +84,48 @@ $row=mysqli_fetch_assoc($result);
 	<h1>LIBRARY DETAILS</h1><br>
 
 	<p class="personal"><b>USN:</b><?php echo $_SESSION['usn']; ?></p><br>
-	<p class="personal"><b>Lib_ID:</b><?php echo $lib_id; ?></p><br>
+  <p class="personal"><b>USN:</b><?php echo $_SESSION['name']; ?></p><br>
+	<!-- <p class="personal"><b>Lib_ID:</b><?php echo $lib_id; ?></p><br>
 	<p class="personal"><b>Book Name:</b><?php echo $book_name; ?></p><br>
 	<p class="personal"><b>Book ID:</b><?php echo $book_id; ?></p><br>
 	<p class="personal"><b>Date In:</b><?php echo $date_out; ?></p><br>
-	<p class="personal"><b>Date Out:</b><?php echo $due_date; ?></p><br>
+	<p class="personal"><b>Date Out:</b><?php echo $due_date; ?></p><br> -->
+
+<?php
+
+  echo '<table style="margin: 160px;width:600px;height:100px;">
+    <tr>
+
+
+      <th>Book ID</th>
+      <th>Book Name</th>
+      <th>Date Out</th>
+      <th>Due Date</th>
+
+
+    </tr>';
+
+
+      while($row = mysqli_fetch_assoc($result)){
+        echo "<tr>";
+
+
+          echo "<td>".$row['book_id']."</td>";
+          echo "<td>".$row['book_name']."</td>";
+          echo "<td>".$row['date_out']."</td>";
+          echo "<td>".$row['due_date']."</td>";
+
+
+        echo "</tr>";
+
+      }
+
+
+
+
+
+  echo '</table>';
+  ?>
 </fieldset>
 
 

@@ -51,7 +51,7 @@ $row=mysqli_fetch_assoc($result);
          <li><a class="active" href="UpdateStudent/updatestudent.php">Update Student  </a></li>
 
       </ul>
- <button  id="logoutbutton" onclick="location.href='../index.php'" type="submit" name="logout" >LOGOUT</button>
+ <!-- <button  id="logoutbutton" onclick="location.href='../index.php'" type="submit" name="logout" >LOGOUT</button> -->
 
 
 
